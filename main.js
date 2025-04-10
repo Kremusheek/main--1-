@@ -275,9 +275,9 @@ const oddFn = (n) => {
 // console.log(mainFunc(2, 5, cbAdd)) // 7
 // console.log(mainFunc(2, 5, 'not a func')) // false
 
-function mainFunc(a, b, c ){
-    if (typeof cb!== 'function')return false;
-    return cb(a, b);
+function mainFunc(a, b, callback ){
+    if (typeof callback !== 'function')return false;
+    return callback(a, b);
 }
 
 function cbRandom(min, max) {
@@ -287,7 +287,7 @@ function cbRandom(min, max) {
 function cbPow(num, pow) {
     return Math.pow(num, pow);
 }
-function   cbAdd (a, b){
+function cbAdd (a, b){
     return a + b;
 }
 
